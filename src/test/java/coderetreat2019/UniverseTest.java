@@ -16,7 +16,7 @@ public class UniverseTest {
     public void singleCellGrid() {
         Universe g = new Universe();
 
-        g.createCell(new Coordinate(0, 1, 2));
+        g.createCell(new Cell(0, 1, 2));
         assertEquals(1, g.getSize());
     }
 

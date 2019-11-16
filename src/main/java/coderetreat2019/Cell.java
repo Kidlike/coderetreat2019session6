@@ -2,12 +2,14 @@ package coderetreat2019;
 
 import java.util.Objects;
 
-public class Coordinate {
+public class Cell {
     private final int x;
     private final int y;
     private final int z;
 
-    public Coordinate(int x, int y, int z) {
+    private int tickCount = 0;
+
+    public Cell(int x, int y, int z) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -16,8 +18,8 @@ public class Coordinate {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Coordinate)) return false;
-        Coordinate that = (Coordinate) o;
+        if (!(o instanceof Cell)) return false;
+        Cell that = (Cell) o;
         return x == that.x &&
                 y == that.y &&
                 z == that.z;
