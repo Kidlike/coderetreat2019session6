@@ -11,4 +11,13 @@ public class GridTest {
 
         assertEquals(0, g.getSize());
     }
+
+    @Test
+    public void singleCellGrid() {
+        Grid g = new Grid();
+
+        g.createCell(new Coordinate(0, 1));
+
+        assertEquals(1, g.getSize());
+    }
 }
