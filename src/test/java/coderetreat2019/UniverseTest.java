@@ -4,17 +4,17 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class GridTest {
+public class UniverseTest {
     @Test
     public void emptyGrid() {
-        Grid g = new Grid();
+        Universe g = new Universe();
 
         assertEquals(0, g.getSize());
     }
 
     @Test
     public void singleCellGrid() {
-        Grid g = new Grid();
+        Universe g = new Universe();
 
         g.createCell(new Coordinate(0, 1));
 
