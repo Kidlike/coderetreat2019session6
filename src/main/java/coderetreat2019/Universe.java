@@ -13,4 +13,17 @@ public class Universe {
     public void createCell(Cell coordinate) {
         cells.add(coordinate);
     }
+
+    public void tick() {
+        Set<Cell> cells = new HashSet<>();
+
+        for (Cell cell: this.cells) {
+            if (cell.staysAlive()) {
+                cells.add(cell);
+            }
+        }
+
+        this.cells = cells;
+    }
+
 }

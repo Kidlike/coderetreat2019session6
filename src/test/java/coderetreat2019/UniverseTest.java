@@ -20,4 +20,15 @@ public class UniverseTest {
         assertEquals(1, g.getSize());
     }
 
+    @Test
+    public void singleCellGridKillsCellAfter10Ticks() {
+        Universe g = new Universe();
+        g.createCell(new Cell(0, 1, 2));
+
+        for (int i = 0; i < 10; i++) {
+            g.tick();
+        }
+
+        assertEquals(0, g.getSize());
+    }
 }

@@ -9,6 +9,14 @@ public class Cell {
 
     private int tickCount = 0;
 
+    public int getTickCount() {
+        return tickCount;
+    }
+
+    public boolean staysAlive() {
+        return false;
+    }
+
     public Cell(int x, int y, int z) {
         this.x = x;
         this.y = y;
@@ -29,4 +37,5 @@ public class Cell {
     public int hashCode() {
         return Objects.hash(x, y, z);
     }
+
 }
